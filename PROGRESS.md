@@ -7,8 +7,9 @@
 | Phase start (ET) | Hours to deadline | Phase |
 |---|---|---|
 | Wed Sep 23 · 10:33 PM EDT | 114.4 h | 0: setup + plan |
-| Wed Sep 23 · 10:50 PM EDT | 114.2 h | 1–2: research |
-| Thu Sep 24 · 12:05 AM EDT | 113.0 h | 3: concept |
+| Wed Sep 23 · 10:36 PM EDT | 114.4 h | 1–2: research |
+| Wed Sep 23 · 10:44 PM EDT | 114.3 h | 3: concept (pushed 10:45 PM) |
+| Wed Sep 23 · 10:47 PM EDT | 114.2 h | 4: design direction |
 
 ## Phase plan (budgeted backwards from the internal target)
 ~90 working hours between now and the internal done target. Research gets a fixed front slice; the rest follows the hackathon-win Phase 4 split.
@@ -35,5 +36,6 @@
 - Siblings (`scripts/siblings.sh`): no sibling repo has a public CONCEPT.md yet, so overlap is avoided by lane (HACKATHON.md table) and by the past-projects list.
 
 ## Log
-- **Phases 1–3** (done Thu 12:10 AM EDT, ~112.8 h left): network policy blocks devpost.com / youtube / jsdelivr / huggingface / most hosts; WebSearch works, so event facts were re-verified through the search index (no changes; rubric descriptions + themes + organizer added to HACKATHON.md). No LUMA winner gallery is published, so 6 same-domain winner briefs were written from official sources (CAC 2025 ×3, Technovation 2025, Blue Ocean ×2), each marked with what was and wasn't verifiable. Concept picked: **Muslin** (4.75 vs 3.50 vs 3.38), see research/CONCEPTS.md.
+- **Phase 4** (Wed ~11:00 PM EDT): impeccable run from the cloned source (launcher works offline; concept-seed ran **degraded**: its roll service is unreachable from this network, so no challengers). PRODUCT.md written from the brief with inferred facts labelled (Rishik unavailable, so no interview). Direction assigned by the seed: **thrift-store tag system** (position 4 of 7). Contract in `.impeccable/surfaces/index-html.md`; DESIGN.md v0 with verified contrast ratios.
+- **Phases 1–3** (done Wed 10:45 PM EDT, 114.3 h left): network policy blocks devpost.com / youtube / jsdelivr / huggingface / most hosts; WebSearch works, so event facts were re-verified through the search index (no changes; rubric descriptions + themes + organizer added to HACKATHON.md). No LUMA winner gallery is published, so 6 same-domain winner briefs were written from official sources (CAC 2025 ×3, Technovation 2025, Blue Ocean ×2), each marked with what was and wasn't verifiable. Concept picked: **Muslin** (4.75 vs 3.50 vs 3.38), see research/CONCEPTS.md.
 - **Phase 0** (Wed 10:33 PM EDT, 114.4 h left): repo read, tools checked, this file created.
