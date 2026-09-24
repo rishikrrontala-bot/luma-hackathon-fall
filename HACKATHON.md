@@ -4,29 +4,40 @@
 **Deadline:** **Mon Sep 28, 2026 · 5:00 PM EDT**  (`2026-09-28T17:00:00-04:00`)
 > Round 1 is the video submission; top technical projects go to live finals.
 
-*Facts read from the live Devpost page on 2026-09-23. ⚠ = unconfirmed, so verify before relying on it.*
+*Facts first read from the live Devpost page on 2026-09-23; **re-verified 2026-09-24** through the search index of the event and rules pages (this cloud session's network policy blocks direct loads of `*.devpost.com`, see PROGRESS.md). Nothing had changed. Remaining ⚠ items are noted inline.*
+
+## Organizer
+**LUMA**, a Redmond, WA student-led nonprofit co-founded in 2024 by Jash Vohra and Ekansh Jain. They describe their events as *Shark Tank*-style: build a minimum viable product, then pitch it in a five-minute video ([Northwest Asian Weekly, Aug 2026](https://nwasianweekly.com/2026/08/how-redmond-based-luma-is-helping-create-the-next-entrepreneurs-and-business-leaders/)).
 
 ## Eligibility
-Ages 13–18, students only, teams of 1–5, global.
+Ages 13–18, students only (companies and professional organizations excluded), teams of 1–5, all countries and territories except the standard exceptions. The competition starts Sep 20; "submissions made before this date will not be considered."
 
 ## Theme
-“Pitch your idea”: execute a functional project (app, website, software tool) that solves a real-world problem through code.
+"Pitch your idea": execute a functional project (app, website, software tool) that solves a real-world problem through code. Devpost themes: **Beginner Friendly · Machine Learning/AI · Open Ended**.
 
 ## Prizes
-- Sponsorship subscriptions for every participant (1,000 winners)
+- Sponsorship subscriptions for every eligible participant (up to 1,000 winners). ⚠ Per-person value ("over $200") was stated for LUMA's spring 2026 event; not confirmed for this one.
 - Top technical projects advance to live finals
 
-## Submission requirements (from the event page)
-- **A 5-minute video** covering, in order: the problem, a codebase/architecture walkthrough, a live product demo, and a scalability discussion
+## Submission requirements (from the event and rules pages)
+- **Round 1: a 5-minute video** covering, in order:
+  1. **The Problem**: what specific technical or social challenge you are tackling
+  2. **The Build**: a walkthrough of the codebase, architecture and stack used
+  3. **The Demo**: a screen-share recording of the project working in real time
+  4. **Scalability**: how the project is suited to handle more data or more users
+- **Round 2: Live Finals.** Finalists "run their code live for a panel of judges and defend their technical logic and architecture in a real time discussion."
+- Judges' decisions are final; LUMA may disqualify submissions that break the rules or the spirit of the competition.
 
-## Judging criteria
+## Judging criteria (verified, with LUMA's own descriptions)
 
-| Criterion | Weight |
-|---|---|
-| Technical Execution (code quality, functionality, stack grasp) | 25% |
-| Innovation & UX | 25% |
-| Business & Finance (realistic model, path to financial sustainability) | 25% |
-| Communication (video + live Q&A) | 25% |
+| Criterion | Weight | LUMA's description |
+|---|---|---|
+| Technical Execution | 25% | Code cleanliness, structural efficiency, documentation depth, and overall functional stability of the tech stack |
+| Innovation & UX | 25% | Originality of the concept paired with intuitive, fluid user flows |
+| Business & Finance | 25% | Realism of the proposed business model, monetizable hooks, and pathways to financial viability |
+| Communication | 25% | Performance during the video pitch and the team's agility during the live Q&A |
+
+⚠ Judges are not listed anywhere the search index reaches.
 
 ## Event-specific deliverables (on top of CLAUDE.md's Definition of done)
 - `business/BUSINESS-MODEL.md`: customer, pricing, unit economics, CAC/LTV (assumptions labelled as assumptions), TAM/SAM/SOM with sources, go-to-market, 12-month plan
