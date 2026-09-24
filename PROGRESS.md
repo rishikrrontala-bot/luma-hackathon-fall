@@ -3,6 +3,24 @@
 **Deadline:** Mon Sep 28, 2026 · 5:00 PM EDT (`2026-09-28T17:00:00-04:00`)
 **Internal "done" target:** Sun Sep 27, 2026 · 5:00 PM EDT (≥24 h before the deadline, per CLAUDE.md lesson 2)
 
+## ▶ RESUME HERE (paused Wed Sep 23 · 11:02 PM EDT, 114.0 h to deadline, at Rishik's request)
+State: research, concept (**Muslin**), PRODUCT.md, DESIGN.md v0 and the impeccable direction contract are done and pushed. The CV core compiles (`npx tsc -p tsconfig.app.json --noEmit` is clean) but has **no tests yet and hasn't been run on an image**.
+
+Written so far (all in `src/`):
+- `cv/geometry.ts`: points, RDP, convex hull, convexity defects, crossings, line fit
+- `cv/homography.ts`: DLT, inverse, Zhang–He rectangle aspect recovery
+- `cv/image.ts`: Lab, box blur, downscale · `cv/segment.ts`: Otsu, morphology, components, hole fill, Moore tracing
+- `cv/paper.ts`: paper detection (whiteness thresholds → quads → edge-line refinement)
+- `cv/garment.ts`: floor k-means model → distance map → Otsu → garment blob + contour
+- `cv/measure.ts`: symmetry-axis alignment, top/bottom landmarks, orientation scoring
+- `cv/plane.ts`: homography from corners, lengths, Monte-Carlo ± · `cv/pipeline.ts`: `analyzePhoto()` end to end
+- `domain/paper.ts` (Letter/A4), `domain/silhouette.ts` (parametric tee/longsleeve/hoodie/jeans/shorts with ground truth)
+
+Next steps, in order:
+1. `tests/*.test.ts` (Vitest) for geometry, homography, segment, silhouette truth, and a pipeline test on a rendered synthetic image.
+2. `bench/render.ts` (@napi-rs/canvas scene: floor texture, garment, paper, perspective warp, noise, JPEG) → `bench/make-samples.ts` (public/samples + manifest) → `bench/run.ts` (error table → bench/RESULTS.md). Tune the CV until the numbers are good; report honestly.
+3. UI (React, thrift-tag world per DESIGN.md), worker, CI, e2e, then business docs, video, submission kit, HANDOFF.
+
 ## Countdown log
 | Phase start (ET) | Hours to deadline | Phase |
 |---|---|---|
@@ -10,6 +28,7 @@
 | Wed Sep 23 · 10:36 PM EDT | 114.4 h | 1–2: research |
 | Wed Sep 23 · 10:44 PM EDT | 114.3 h | 3: concept (pushed 10:45 PM) |
 | Wed Sep 23 · 10:47 PM EDT | 114.2 h | 4: design direction |
+| Wed Sep 23 · 10:50 PM EDT | 114.2 h | 5: build (CV core) → paused 11:02 PM |
 
 ## Phase plan (budgeted backwards from the internal target)
 ~90 working hours between now and the internal done target. Research gets a fixed front slice; the rest follows the hackathon-win Phase 4 split.
