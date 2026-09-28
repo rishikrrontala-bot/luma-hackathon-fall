@@ -6,13 +6,13 @@
 
 ## The judge path
 
-1. Open **Measure** and choose **Use demo photo**. The app shows on-device garment measurements with uncertainty.
-2. Open **Fit check** and edit the seller's measurements. The overlay and per-dimension deltas update immediately.
-3. Open **Closet** to switch the reference garment. All data in this demo is local to the browser.
+1. Open **Measure** and choose **View seeded preview** to see clearly labeled sample measurements and uncertainty tags.
+2. Open **Fit check** and edit the seller's measurements. The per-dimension differences update immediately.
+3. Open **Closet** to switch between three sample reference garments. The app recalculates the comparison.
 
 ## How it works
 
-The production core in `src/cv/` is a dependency-free TypeScript pipeline: paper detection → perspective correction → garment segmentation → landmarks → measurements with uncertainty. The interface currently includes a deterministic demo path so a cold judge visit never depends on an API key or account.
+The experimental core in `src/cv/` is a dependency-free TypeScript pipeline: paper detection → perspective correction → garment segmentation → landmarks → measurements with uncertainty. It is not wired to the browser interface yet. The current app demonstrates the comparison flow with deterministic sample data, without an API key or account.
 
 ## Run locally
 
@@ -21,10 +21,10 @@ npm install
 npm run dev
 ```
 
-Checks: `npm run build`, `npm run typecheck`, `npm run lint`.
+Checks: `npm run check` runs type checking, linting, five focused tests, and the production build.
 
 ## Honest limits
 
-The demo measurements are a visual aid, not a guarantee of fit. Fabric stretch, body shape, drape and seller measurement errors are not inferred. Photos stay local in the intended product; this submission demo uses a seeded example so it is reliable during judging.
+The demo measurements and rack are samples. The visual overlay illustrates a comparison; it does not derive shape from the entered measurements. Fabric stretch, body shape, drape and seller measurement errors are not inferred. The photo pipeline needs integration and evaluation on varied real garments before production use.
 
 Built by **Rishik Rontala** with Claude Code as an AI coding agent, directed by Rishik.
