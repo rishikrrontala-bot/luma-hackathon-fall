@@ -1,0 +1,122 @@
+.muslin-garment-preview {
+  --garment-rx: 0deg;
+  --garment-ry: 0deg;
+  height: 430px;
+  min-height: 350px;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  perspective: 1050px;
+  background:
+    radial-gradient(ellipse 45% 31% at 50% 78%, rgb(57 67 67 / .09), transparent 92%),
+    radial-gradient(ellipse 75% 80% at 48% 24%, #f1f3ef, #dce2de 80%, #d3dad5);
+  cursor: crosshair;
+  touch-action: pan-y;
+}
+
+.muslin-garment-preview::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: .42;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23727c78' opacity='.11' filter='url(%23n)' d='M0 0h160v160H0z'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.muslin-garment-preview::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  left: 27%;
+  right: 27%;
+  bottom: 4.5%;
+  height: 9%;
+  border-radius: 50%;
+  background: #43514e;
+  opacity: .13;
+  filter: blur(18px);
+  transform: scaleX(.985);
+  pointer-events: none;
+}
+
+.muslin-preview-meta {
+  position: absolute;
+  z-index: 4;
+  inset: 18px 20px auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: #596761;
+  font: 700 9px/1.4 'Martian Mono', monospace;
+  letter-spacing: .095em;
+  pointer-events: none;
+}
+
+.muslin-garment-float,
+.muslin-garment-model,
+.muslin-garment-svg,
+.muslin-preview-guides {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.muslin-garment-float {
+  z-index: 1;
+  animation: muslin-garment-breathe 7s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.muslin-garment-model {
+  transform-style: preserve-3d;
+  transform: rotateX(var(--garment-rx)) rotateY(var(--garment-ry)) translateZ(22px);
+  transition: transform 180ms cubic-bezier(.23, 1, .32, 1);
+  will-change: transform;
+}
+
+.muslin-garment-svg {
+  display: block;
+  overflow: visible;
+}
+
+.muslin-preview-guides {
+  z-index: 3;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 1px rgb(20 30 29 / .18));
+}
+
+.muslin-preview-instruction {
+  position: absolute;
+  z-index: 4;
+  right: 20px;
+  bottom: 18px;
+  color: #596761;
+  font: 700 9px/1.4 'Martian Mono', monospace;
+  letter-spacing: .08em;
+  pointer-events: none;
+}
+
+@keyframes muslin-garment-breathe {
+  from { transform: translateY(2px) rotate(-.35deg); }
+  to { transform: translateY(-4px) rotate(.35deg); }
+}
+
+@media (max-width: 760px) {
+  .muslin-garment-preview { height: 350px; min-height: 350px; }
+  .muslin-preview-meta { inset: 13px 13px auto; font-size: 7px; }
+  .muslin-preview-meta span:last-child { display: none; }
+  .muslin-preview-instruction { display: none; }
+}
+
+@media (max-width: 480px) {
+  .muslin-garment-float,
+  .muslin-preview-guides { width: 124%; left: -12%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .muslin-garment-float { animation: none; }
+  .muslin-garment-model { transition: none; transform: none; }
+  .muslin-preview-instruction { display: none; }
+}

@@ -1,5 +1,9 @@
 # DESIGN: Muslin
 
+## Garment preview revision
+
+The preview follows the isolated garment presentation of [H&M's product detail](https://mobbin.com/screens/712baa47-6362-4975-a62e-0018d9d2f799) and the restrained annotation of [H&M's size guide](https://mobbin.com/screens/51fba272-02e3-4a6d-b80a-e9900d75bdea). The hoodie illustration is original to Muslin: layered fabric, seams, and a soft ground shadow create depth. Fine guides stay fixed while the garment tilts gently toward a fine pointer. Reduced-motion users see a still view. The right rail retains the numeric values; the illustration stays a seeded preview.
+
 > **Status:** v0, written at the direction stage from the direction contract (`.impeccable/surfaces/index-html.md`). Impeccable rewrites DESIGN.md from the *built* world at the finish review; this version is the plan the build follows.
 
 ## World: the thrift-store tag system
