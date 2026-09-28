@@ -4,6 +4,8 @@
 
 **Live demo:** https://rishikrrontala-bot.github.io/luma-hackathon-fall/
 
+**Five-minute narrated demo:** https://raw.githubusercontent.com/rishikrrontala-bot/luma-hackathon-fall/main/submission/video/demo.mp4
+
 ## The judge path
 
 1. Open **Measure** and choose **View seeded preview** to see clearly labeled sample measurements and uncertainty tags.
